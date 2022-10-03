@@ -1,39 +1,39 @@
-import { Fragment } from "react";
-import { NavLink } from "react-router-dom";
+import { Fragment, lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import "swiper/scss";
+import Main from "./components/layout/Main";
+import Banner from "./components/banner/Banner";
+// import HomePage from "./pages/HomePage";
+// import MoviesPage from "./pages/MoviesPage";
+// import MovieDetailPage from "./pages/MovieDetailPage";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const MoviesPage = lazy(() => import("./pages/MoviesPage"));
+const MovieDetailPage = lazy(() => import("./pages/MovieDetailPage"));
 
 function App() {
   return (
     <Fragment>
-      <header className="flex items-center justify-center py-10 mb-10 text-white header gap-x-5">
-        <span className="text-primary">Home</span>
-        <span>Movies</span>
-      </header>
-      <section className="banner h-[400px] page-container">
-        <div className="relative w-full h-full rounded-lg">
-          <img
-            src="https://nld.mediacdn.vn/2019/4/25/3515432-endgamedek-15561710302491765206118.jpg"
-            alt=""
-            className="object-cover w-full h-full rounded-lg"
-          />
-          <div className="absolute w-full text-white left-5 bottom-5">
-            <h2 className="mb-5 text-3xl font-bold">Avengers: Endgame</h2>
-            <div className="flex items-center mb-8 gap-x-3">
-              <span className="px-4 py-2 border border-white rounded-md">
-                Action
-              </span>
-              <span className="px-4 py-2 border border-white rounded-md">
-                Adventure
-              </span>
-              <span className="px-4 py-2 border border-white rounded-md">
-                Drama
-              </span>
-            </div>
-            <button className="px-6 py-3 font-medium text-white rounded-lg bg-primary">
-              Watch now
-            </button>
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={<></>}>
+        <Routes>
+          <Route element={<Main></Main>}>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Banner></Banner>
+                  <HomePage></HomePage>
+                </>
+              }
+            ></Route>
+            <Route path="/movies" element={<MoviesPage></MoviesPage>}></Route>
+            <Route
+              path="/movie/:movieId"
+              element={<MovieDetailPage></MovieDetailPage>}
+            ></Route>
+          </Route>
+        </Routes>
+      </Suspense>
     </Fragment>
   );
 }
