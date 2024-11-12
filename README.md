@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Simple Movie Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple movie website built using **React**. It allows users to search for movies, view movie details, and explore different genres. The website fetches movie data from an external API and displays it dynamically on the user interface.
+
+## Live Demo
+You can view the live demo of the project here:  
+[Simple Movie Website Demo](https://simple-movie-4mcc4biag-vyxxs-projects.vercel.app)
+
+
+## Features
+- **Movie Search**: Allows users to search for movies by title.
+- **Movie Details**: Displays detailed information about the selected movie.
+- **Responsive Design**: Mobile-friendly interface to view movies on any device.
+- **Popular Movies**: Displays popular movies on the home page.
+- **Movie Genres**: Filter movies by genre.
+- **Dark/Light Theme**: Toggle between dark and light themes.
 
 ## Available Scripts
 
@@ -8,7 +21,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -68,3 +81,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Screenshots
+
+### Home Page
+![Home Page](./screenshots/home-page.png)
+
+### Movie Details
+![Movie Details](./screenshots/movie-details.png)
+
+### Search Results
+![Search Results](./screenshots/search-results.png)
+
+## Technologies Used
+- **React**: Frontend library to build the user interface.
+- **Axios**: For making HTTP requests to fetch movie data from an external API.
+- **Tailwind CSS**: For styling the website and creating a responsive design.
+- **OMDb API**: Used to fetch movie data and details.
+
+## Setup Instructions
+1. Clone this repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/simple-movie-website.git
+   cd simple-movie-website
