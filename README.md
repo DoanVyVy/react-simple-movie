@@ -4,7 +4,7 @@ This project is a simple movie website built using **React**. It allows users to
 
 ## Live Demo
 You can view the live demo of the project here:  
-[Simple Movie Website Demo](https://simple-movie-4mcc4biag-vyxxs-projects.vercel.app)
+[Simple Movie Website Demo](https://simple-movie-ochre.vercel.app/)
 
 
 ## Features
